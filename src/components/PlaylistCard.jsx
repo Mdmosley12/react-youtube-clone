@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import { CheckCircle, PlaylistPlay, List } from "@mui/icons-material";
+import { CheckCircle, List } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import {
   demoChannelTitle,
