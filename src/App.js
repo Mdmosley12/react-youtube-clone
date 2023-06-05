@@ -7,6 +7,7 @@ import {
   ChannelDetail,
   SearchFeed,
   VideoDetail,
+  PlaylistDetail,
 } from "./components";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/channel/:id" element={<ChannelDetail />} />
           <Route path="/search/:searchTerm" element={<SearchFeed />} />
+          <Route path="/playlist/:id" element={<PlaylistDetail />} />
         </Routes>
       </Box>
     </BrowserRouter>
