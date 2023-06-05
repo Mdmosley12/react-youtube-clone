@@ -7,7 +7,11 @@ import {
   demoProfilePicture,
 } from "../utils/constants";
 
-const PlaylistCard = ({ playlistDetail }) => {
+const PlaylistCard = ({ playlistDetail, playlistId }) => {
+  const destination = !playlistId
+    ? `/video/${playlistDetail?.snippet.resourceId.videoId}`
+    : `/playlist/${playlistId}`;
+
   return (
     <Card
       sx={{
@@ -16,7 +20,7 @@ const PlaylistCard = ({ playlistDetail }) => {
         borderRadius: 0,
       }}
     >
-      <Link to={`/playlist/${playlistDetail?.id?.playlistId}`}>
+      <Link to={destination}>
         <CardMedia
           image={
             playlistDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture
@@ -33,7 +37,7 @@ const PlaylistCard = ({ playlistDetail }) => {
         </Link>
         <Link
           to={
-            playlistDetail.snippet.channelId
+            playlistDetail?.snippet?.channelId
               ? `/channel/${playlistDetail.snippet.channelId}`
               : demoChannelUrl
           }

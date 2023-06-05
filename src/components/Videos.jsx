@@ -22,7 +22,12 @@ const Videos = ({ videos, direction, justifyContent }) => {
                 channelId={item.snippet.channelId}
               />
             )}
-            {item.id.playlistId && <PlaylistCard playlistDetail={item} />}
+            {item.id.playlistId && (
+              <PlaylistCard
+                playlistDetail={item}
+                playlistId={item.id.playlistId}
+              />
+            )}
           </Box>
         );
       })}
