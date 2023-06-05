@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import PlaylistVideos from "./PlaylistVideos";
