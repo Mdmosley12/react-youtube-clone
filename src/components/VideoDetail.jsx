@@ -6,6 +6,7 @@ import { CheckCircle } from "@mui/icons-material";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import Videos from "./Videos";
+import VideoComments from "./VideoComments";
 
 const VideoDetails = () => {
   const [videoDetail, setVideoDetail] = useState(null);
@@ -35,7 +36,7 @@ const VideoDetails = () => {
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
-          <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
+          <Box sx={{ width: "98%", top: "86px", ml: "15px", mt: "13px" }}>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               className="react-player"
@@ -71,6 +72,7 @@ const VideoDetails = () => {
                 </Typography>
               </Stack>
             </Stack>
+            <VideoComments videoId={id} />
           </Box>
         </Box>
         <Box
