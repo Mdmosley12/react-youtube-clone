@@ -18,6 +18,8 @@ const PlaylistCard = ({ playlistDetail, playlistId }) => {
         width: { xs: "365px", sm: "358px", md: "300px" },
         boxShadow: "none",
         borderRadius: 0,
+        mb: "10px",
+        mt: "-10px",
       }}
     >
       <Link to={destination}>
