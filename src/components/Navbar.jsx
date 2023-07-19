@@ -2,6 +2,8 @@ import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
+import SignInButton from "./SignInButton";
+import SignOutButton from "./SignOutButton";
 
 const Navbar = () => (
   <Stack
@@ -19,6 +21,10 @@ const Navbar = () => (
       <img src={logo} alt="logo" height={45} />
     </Link>
     <SearchBar />
+    <Stack direction="row" alignItems="center" sx={{ color: "white" }}>
+      <SignInButton />
+      <SignOutButton />
+    </Stack>
   </Stack>
 );
 
