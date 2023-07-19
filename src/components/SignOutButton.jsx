@@ -33,6 +33,7 @@ const SignOutButton = () => {
           marginY: "28px",
           zIndex: "10px",
           background: "rgb(82,82,82)",
+          // eslint-disable-next-line
           background:
             "linear-gradient(90deg, rgba(82,82,82,1) 0%, rgba(3,0,2,1) 100%)",
         }}
