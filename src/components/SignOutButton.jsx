@@ -3,6 +3,7 @@ import { Button, Stack } from "@mui/material";
 import { useState } from "react";
 import AccountBoxOutlinedIcon from "@mui/icons-material/AccountBoxOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { demoProfilePicture } from "../utils/constants";
 
 const SignOutButton = () => {
   const { logout, isAuthenticated, user } = useAuth0();
@@ -12,11 +13,12 @@ const SignOutButton = () => {
     <>
       {isAuthenticated && (
         <img
-          src={user.picture}
+          src={user.picture || demoProfilePicture}
           alt="displayPicture"
           height={45}
           style={{ borderRadius: 30, cursor: "pointer" }}
           onClick={() => {
+            console.log(user);
             setToggle(!toggle);
           }}
         />
